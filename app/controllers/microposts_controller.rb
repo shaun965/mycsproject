@@ -9,7 +9,7 @@ class MicropostsController < ApplicationController
 		
 		if @micropost.save
 			flash[:success] = "Micropost created!"
-			binding.pry
+			#binding.pry
 			redirect_to root_url
 		else
 			@feed_item = []

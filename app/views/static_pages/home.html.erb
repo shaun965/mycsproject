@@ -1,0 +1,107 @@
+<% if logged_in? %>
+
+
+<!---------------- -->
+<div class="headerrr">
+  <div class="container">
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li class = "changedList"><%= link_to "Home", root_path %></li>
+        <li class = "changedList"><%= link_to "Help", help_path %></li>
+
+        <% if logged_in? %>
+          <li><%=link_to "Users", users_path %></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Account <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Profile", current_user %></li>
+              <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+              <li class="divider"></li>
+              <li>
+                <%= link_to "Log out", logout_path, method: "delete" %>
+              </li>
+            </ul>
+          </li>
+        <% else %>
+          <li class = "changedList"><%= link_to "Log in", login_path %></li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<!---------------- -->
+
+
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render 'shared/user_info' %>
+      </section>
+      <section class="micropost_form">
+        <%= render 'shared/micropost_form' %>
+      </section>
+    </aside>
+    <div class="col-md-8">
+      <h3>Micropost Feed</h3>
+      <%= render 'shared/feed' %>
+    </div>
+  </div>
+
+  <!--  Else statement -->
+<% else %>
+
+<div class="landing-page">
+<!--  <%= render 'layouts/header' %> -->
+  
+<div class="headerrr">
+  <div class="container">
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li class = "changedList"><%= link_to "Home", root_path %></li>
+        <li class = "changedList"><%= link_to "Help", help_path %></li>
+
+        <% if logged_in? %>
+          <li><%=link_to "Users", users_path %></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Account <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Profile", current_user %></li>
+              <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+              <li class="divider"></li>
+              <li>
+                <%= link_to "Log out", logout_path, method: "delete" %>
+              </li>
+            </ul>
+          </li>
+        <% else %>
+          <li class = "changedList"><%= link_to "Log in", login_path %></li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+
+  <br></br>
+  <br></br>
+  <div>
+  <h1>Sample app</h1>
+  <h2>
+    Feeling lonely and bored?
+  </h2>
+  </div>
+
+  <%= link_to "Sign up now!", signup_path, class: "customButton" %>
+<% end %>
+
+  <div class = footr>
+  	Copyright &copy mycsproject.com
+  </div>
+
+
+</div>

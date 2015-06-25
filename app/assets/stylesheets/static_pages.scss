@@ -1,0 +1,105 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.landing-page{
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	background-image: url("/images/landingPhoto.jpg");
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	background-position: center center;
+  	background-repeat: no-repeat;
+  	padding: 0;
+    text-align: center;
+}
+
+.headerr{
+	background-color: black;
+}
+
+.customButton{
+  	position: relative;
+  	top: 10vh;
+	left: 0vw;
+	display: inline-block;
+  	width: 200px;
+  	padding: 8px;
+  	color: #fff;
+  	border: 1px solid #fff;
+  	text-align: center;
+  	outline: none;
+  	text-decoration: none;
+  	border-radius: 5px;
+  	transition: background-color 0.2s ease-out,color 0.2s ease-out;
+}
+
+.customButton:hover,
+.customButton:active {
+  	background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  transition: background-color 0.3s ease-in,
+              color 0.3s ease-in;
+        text-decoration: none;
+	}
+
+.changedList{
+  font-size: 15px;
+  color: white;
+}
+
+.changedList a {
+  color: white;
+}
+
+.footr{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    width: 100%;
+    bottom: 0;  
+    text-align: center;
+}
+
+@media screen 
+  and (max-device-width: 2000px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+  .headerrr{
+    background-color: white;
+  }
+}
+
+@media screen 
+  and (max-device-width: 2000px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+  .headerrr{
+    background-color: rgba(0, 0, 0, 0.7);
+
+  }
+}
+
+.helpr{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: url("/images/helpBackground.jpeg");
+  -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 0;
+    text-align: center;
+}
+
+
+
+
+
+
+
+

@@ -115,7 +115,7 @@ production:
      # credentials safe.
         uri: 'mongodb://heroku_twhk4jrc:h9sue91dpb7q7obkacdm4el5k9@ds039000.mongolab.com:39000/heroku_twhk4jrc'
 
-    options:
+            options:
        # The default consistency is :eventual, which reads from
        #secondaries when possible.
        # Strong forces reads to primary.
@@ -124,11 +124,11 @@ production:
 
        # max_retries specifies the number of times to attempt
        # an operation before giving up.
-        max_retries: 30
+            max_retries: 30
 
        # retry_interval specifies the number of seconds to wait
        # before retrying a single operation.
-        retry_interval: 1
+            retry_interval: 1
 
        # The default timeout is 5, which is the time in seconds
        # for an operation to time out.
@@ -140,12 +140,12 @@ production:
        # (over 30 seconds), it will time out.
        # See our example for long-running queries in the blog
        # post referenced above.
-        timeout: 15
+            timeout: 15
 
        # Set this to ensure that your writes are a round-trip operation
        # and are confirmed by the system.
-        safe: true
+            safe: true
 
        # refresh_interval specifies the number of seconds to cache server information.
        # Lowering this number will help the driver recover more quickly from changes to replica set reconfiguration
-        refresh_interval: 10
+            refresh_interval: 10

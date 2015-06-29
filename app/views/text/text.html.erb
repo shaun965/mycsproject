@@ -1,5 +1,10 @@
-<% provide(:title, "Edit user") %>
+<% provide(:title, 'send text') %>
 
+
+
+<div class="landing-page">
+<!--  <%= render 'layouts/header' %> -->
+  
 <div class="headerrr">
   <div class="container">
     <nav>
@@ -31,41 +36,31 @@
   </div>
 </div>
 
-<h1>Update your profile</h1>
+<h1>Send a text to the number</h1>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@user) do |f| %>
-      <%= render 'shared/error_messages', object: f.object %>
+    <%= form_tag("/twilio", method: "post") do %>
 
-      <%= f.label :name %>
-      <%= f.text_field :name, class: 'form-control' %>
+      <%#= render 'shared/error_messages' %>
 
-      <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control' %>
+  		<%= label_tag(:q, "Message:") %>
+  		<%= text_field_tag(:q) %>
+  		
 
-      <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control' %>
+      <%= label_tag(:a, "Phone number:") %>
+      <%= text_field_tag(:a) %>
+      <br></br>
 
-      <%= f.label :password_confirmation, "Confirmation" %>
-      <%= f.password_field :password_confirmation, class: 'form-control' %>
+      <%= submit_tag("Send a text") %>
 
-      <%= f.submit "Save changes", class: "btn btn-primary" %>
-    <% end %>
-
-    <%= form_for current_user, :url => user_path, :html => { :multipart => true } do |form| %>
-        <%= form.file_field :avatar %>
-
-        <%= form.submit "Save changes", class: "btn btn-primary" %>
-      <% end %>
-
-
-    <div class="gravatar_edit">
-      <%= gravatar_for @user %>
-      <a href="http://gravatar.com/emails" target="_blank">change</a>
-    </div>
+	<% end %>
   </div>
-  <div class = footr>
-    Copyright &copy mycsproject.com
-  </div>
+</div>
+
+
+<div class = footr>
+  Copyright &copy mycsproject.com
+</div>
+
 </div>

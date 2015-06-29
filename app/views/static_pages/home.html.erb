@@ -8,6 +8,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li class = "changedList"><%= link_to "Home", root_path %></li>
         <li class = "changedList"><%= link_to "Help", help_path %></li>
+        <li class = "changedList"><%= link_to "Text", :text_controller %></li>
 
         <% if logged_in? %>
           <li><%=link_to "Users", users_path %></li>
@@ -34,7 +35,7 @@
 
 <!---------------- -->
 
-
+<div class = "container">
   <div class="row">
     <aside class="col-md-4">
       <section class="user_info">
@@ -49,6 +50,7 @@
       <%= render 'shared/feed' %>
     </div>
   </div>
+</div>
 
   <!--  Else statement -->
 <% else %>
@@ -62,6 +64,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li class = "changedList"><%= link_to "Home", root_path %></li>
         <li class = "changedList"><%= link_to "Help", help_path %></li>
+        <li class = "changedList"><%= link_to "Text", :text_controller %></li>
 
         <% if logged_in? %>
           <li><%=link_to "Users", users_path %></li>

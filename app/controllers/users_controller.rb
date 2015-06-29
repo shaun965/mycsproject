@@ -13,7 +13,6 @@ class UsersController < ApplicationController
   #@posts = Post.paginate :page => params[:page], :per_page => 50
   #@posts = Post.perform_search_and_obtain_collection(params[:criteria])
 
-
   def show
   	@user = User.find(params[:id])
     #@microposts = @user.microposts.paginate(page: params[:page])
@@ -26,7 +25,7 @@ class UsersController < ApplicationController
   end
 
   def new
-  	@user = User.new
+  	@user = User.new 
   end
 
   def create
@@ -61,7 +60,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-  	params.require(:user).permit(:name, :email, :password, :password_confirmation)
+  	params.require(:user).permit(:name, :email, :password, :password_confirmation, :message, :avatar)
 	end
 
   def logged_in_user

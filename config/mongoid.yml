@@ -118,8 +118,7 @@ production:
       # # of host:port pairs. (required)
       # hosts:
       #   - localhost:27017
-      uri: "mongodb://heroku_twhk4jrc:h9sue91dpb7q7obkacdm4el5k9@ds039000.mongolab.com:39000/heroku_twhk4jrc"
-      #<%= ENV['MONGOLAB_URI'] %>
+      uri: <%= ENV['MONGOLAB_URI'] %>
 
       options:
        # The default consistency is :eventual, which reads from

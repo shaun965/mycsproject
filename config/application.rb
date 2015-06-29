@@ -3,7 +3,8 @@ require File.expand_path('../boot', __FILE__)
 
 
 require "rails"
-
+#require 'rubygems'
+#require 'twilio-ruby'
 # require 'mongoid'
 
 # Mongoid.load!(File.expand_path('mongoid.yml', './config'))

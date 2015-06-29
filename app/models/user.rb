@@ -2,8 +2,7 @@ class User
   include Mongoid::Document
   include Mongoid::Timestamps
   include ActiveModel::SecurePassword
-
-
+  include Mongoid::Paperclip
   has_many :microposts, dependent: :destroy
 	
   attr_accessor :remember_token
@@ -17,10 +16,8 @@ class User
   
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 
-
-
   field :name,            type: String
-  field :email,           type: String 
+  field :email,           type: String
   # field :created_at,       type: Time          
   # field :updated_at,       type: Time
   field :password_digest,  type: String
@@ -30,6 +27,11 @@ class User
   field :admin,            type: Boolean, default: "false"
   #field :password,          type: String
   #field :password_confirmation,          type: String
+
+  #############Paperclip#############
+
+  has_mongoid_attached_file :avatar
+  ###################################
 
 
 

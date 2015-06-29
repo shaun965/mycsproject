@@ -16,9 +16,13 @@ gem 'sdoc',         '0.4.0', group: :doc
 
 gem "mongoid", "~> 4.0.0"
 gem 'bson_ext'
+gem "mongoid-paperclip", :require => "mongoid_paperclip"
+gem 'aws-sdk', '~> 1.3.4'
 
 gem 'kaminari'
 gem 'pry'
+gem 'twilio-ruby', '~> 4.2.1'
+gem 'paperclip', ['>= 3.4', '!= 4.3.0']
 
 group :development, :test do
   gem 'byebug',      '3.4.0'

@@ -8,6 +8,9 @@ Rails.application.routes.draw do
 
   get 'about' =>  'static_pages#about'
 
+  get 'text' => 'text#text', as: :text_controller
+  post  'twilio' => 'text#twilio'
+
   get 'contact' => 'static_pages#contact'
 
   get 'signup' => 'users#new'
